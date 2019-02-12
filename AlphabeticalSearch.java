@@ -72,7 +72,25 @@ for (String element : word) {
 }
 
 
+
+int n = word.length;
+for  (int i = 0; i < n-1; i++){
+for (int j = 0; j < n-i-1; j++){
+if (word[j].compareTo(word[j+1]) > 0)
+{
+
+    // swap arr[j+1] and arr[i]
+    String temp = word[j];
+    word[j] = word[j+1];
+    word[j+1] = temp;
+
+}
+}
 }
 
 }
+System.out.println("\nSorted");
+  printArray(word);
+}
+
 }
