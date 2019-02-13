@@ -13,6 +13,7 @@ Boolean stop = false;
 int compare;
 int compareNumber = 0;
 int stopCount = 0;
+int count = 0;
 
     //String[] word = new string[9]
     String[] word = {"The", "quick", "brown","fox", "jumps", "over", "the", "lazy", "dog."};
@@ -78,6 +79,7 @@ for  (int i = 0; i < n-1; i++){
 for (int j = 0; j < n-i-1; j++){
 if (word[j].compareTo(word[j+1]) > 0)
 {
+  count ++;
 
     // swap arr[j+1] and arr[i]
     String temp = word[j];
@@ -91,6 +93,7 @@ if (word[j].compareTo(word[j+1]) > 0)
 }
 System.out.println("\nSorted");
   printArray(word);
+  System.out.println(count + " Number of compares");
 }
 
 }
